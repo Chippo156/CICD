@@ -9,4 +9,9 @@ public class HelloController {
     public String hello(){
         return "Hello,CI/CD World!";
     }
+
+    @GetMapping
+    public String welcome(){
+        return "Welcome to CI/CD with GitHub Actions and AWS!";
+    }
 }
