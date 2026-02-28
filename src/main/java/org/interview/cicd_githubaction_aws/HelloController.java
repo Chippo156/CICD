@@ -1,6 +1,7 @@
 package org.interview.cicd_githubaction_aws;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -13,5 +14,10 @@ public class HelloController {
     @GetMapping
     public String welcome(){
         return "Welcome to CI/CD with GitHub Actions and AWS!";
+    }
+
+    @PostMapping("/greet")
+    public String greet(String name){
+        return "Hello, " + name + "! Welcome to CI/CD with GitHub Actions and AWS!";
     }
 }
